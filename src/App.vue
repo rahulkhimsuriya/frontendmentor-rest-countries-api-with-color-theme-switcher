@@ -39,6 +39,9 @@ export default {
     0%,
     100%
   ); /* White (Dark Mode Text & Light Mode Elements) */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
@@ -63,10 +66,12 @@ body.dark {
 
 .container {
   max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
 header {
   background-color: var(--bg-primary);
+  box-shadow: var(--shadow);
 }
 </style>
