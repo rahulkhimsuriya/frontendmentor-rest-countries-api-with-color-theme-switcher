@@ -2,7 +2,7 @@
   <nav class="container navbar">
     <router-link class="navbar__brand" to="/">Where in the world?</router-link>
 
-    <button class="navbar__button">
+    <button class="navbar__button" @click="toggle">
       <span
         ><svg
           class="navbar__button--icon"
@@ -26,7 +26,13 @@
 
 <script>
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+
+  methods: {
+    toggle() {
+      document.body.classList.toggle('dark')
+    }
+  }
 }
 </script>
 

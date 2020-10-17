@@ -41,13 +41,9 @@ export default {
   ); /* White (Dark Mode Text & Light Mode Elements) */
 }
 
-/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%) */
-/* - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%) */
-
-/* - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
-
 body {
-  background: var(--bg-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.5s ease-in-out;
 }
 
 body.dark {
