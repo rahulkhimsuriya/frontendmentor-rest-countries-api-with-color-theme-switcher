@@ -38,6 +38,7 @@ export default {
   background-color: var(--bg-primary);
   border-radius: 10px;
   color: var(--text-color);
+  max-width: 250px;
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: pointer;
