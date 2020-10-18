@@ -55,6 +55,7 @@ export default {
 
 .card:hover {
   box-shadow: var(--shadow-lg);
+  transform: scale(1.05);
 }
 
 .card__image {
