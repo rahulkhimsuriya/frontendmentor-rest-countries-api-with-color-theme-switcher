@@ -4,7 +4,7 @@
       <NavBar />
     </header>
     <main class="container">
-      <router-view />
+      <router-view :key="$route.path" />
     </main>
   </div>
 </template>
@@ -46,7 +46,7 @@ export default {
 
 body {
   background-color: var(--bg-color);
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 body.dark {
@@ -68,6 +68,12 @@ body.dark {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+}
+
+.loading {
+  color: var(--text-color);
+  text-align: center;
+  margin: 2rem auto 0 auto;
 }
 
 header {

@@ -108,7 +108,7 @@ export default {
 
   async mounted() {
     this.loading = true
-    await this.$store.dispatch('fetchAllcountries')
+    await this.$store.dispatch('fetchAllCountries')
     this.loading = false
   },
 
@@ -160,11 +160,6 @@ section {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 20%;
-}
-
-.loading {
-  text-align: center;
-  margin: 2rem auto 0 auto;
 }
 
 .no-result {

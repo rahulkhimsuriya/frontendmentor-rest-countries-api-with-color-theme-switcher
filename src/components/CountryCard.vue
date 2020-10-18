@@ -1,5 +1,11 @@
 <template>
-  <div class="card">
+  <router-link
+    :to="{
+      name: 'country-detail',
+      params: { code: country.alpha3Code.toLowerCase() }
+    }"
+    class="card"
+  >
     <div class="card__image">
       <img :src="country.flag" :alt="country.name" />
     </div>
@@ -7,7 +13,8 @@
       <h3 class="card__body--header">{{ country.name }}</h3>
       <ul class="card__body--list">
         <li>
-          <strong>Population:</strong><span>{{ country.population }}</span>
+          <strong>Population:</strong>
+          <span>{{ country.population | formateNumber }}</span>
         </li>
         <li>
           <strong>Region:</strong><span>{{ country.region }}</span>
@@ -17,7 +24,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -42,6 +49,7 @@ export default {
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
