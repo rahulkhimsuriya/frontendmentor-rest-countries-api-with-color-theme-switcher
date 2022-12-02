@@ -22,7 +22,8 @@ export default new Vuex.Store({
   actions: {
     async fetchAllCountries({ commit, state }) {
       if (state.countries) return state.countries
-      const response = await axios.get('https://restcountries.eu/rest/v2/all')
+
+      const response = await axios.get('https://restcountries.com/v2/all')
       commit('SET_COUNTRIES', response.data)
       return response.data
     },
@@ -32,13 +33,13 @@ export default new Vuex.Store({
         const country = getters.getCountryByCode(code)
         commit('SET_COUNTRY', country)
         return country
-      } else {
-        const response = await axios.get(
-          `https://restcountries.eu/rest/v2/alpha/${code}`
-        )
-        commit('SET_COUNTRY', response.data)
-        return response.data
       }
+
+      const response = await axios.get(
+        `https://restcountries.com/v2/alpha/${code}`
+      )
+      commit('SET_COUNTRY', response.data)
+      return response.data
     }
   },
 
